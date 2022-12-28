@@ -1,0 +1,46 @@
+html {
+  background-color: #ff9a71;
+  color: #f5f5f5;
+  text-align: center;
+  font-family: "Varela Round", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  text-align: center;
+}
+
+hr {
+  background-color: #000;
+  height: 3px;
+  border-radius: 100px;
+  border-color: #000;
+}
+
+nav {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  border-radius: 100px;
+  font-size: 20px;
+}
+
+nav a {
+  color: #fff;
+  padding: 14px 16px;
+}
+
+nav a:hover {
+  background-color: #04aa6d;
+}
+
+#aboutPage img {
+  float: left;
+}
+
+#aboutPageClosingHR {
+  margin-top: 80px;
+}
