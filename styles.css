@@ -9,6 +9,12 @@ color: black;
 
 
 }
+.projects{
+color: black;
+list-style-type: none;
+
+}
+
 a {
   text-decoration: none;
 }
