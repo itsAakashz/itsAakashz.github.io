@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Watched Movies</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>My Watched Movies</h1>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2>Add a Movie</h2>
+      <form id="movieForm">
+        <input type="text" id="movieTitle" placeholder="Movie title" required>
+        <input type="text" id="movieYear" placeholder="Year" required>
+        <button type="submit">Add</button>
+      </form>
+    </div>
+
+    <div class="container">
+      <h2>Watched Movies</h2>
+      <ul id="movieList"></ul>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
