@@ -7,7 +7,7 @@ document.getElementById('login-form').addEventListener('submit', function(event)
   // Simple validation (replace with server-side validation)
   if (username === 'itsAakashz' && password === 'Aakashuu') {
     // Redirect to the main page or perform other actions
-    window.location.href = 'main.html';
+    window.location.href = 'movies_watched_list/index.html';
   } else {
     document.getElementById('error-message').textContent = 'Invalid username or password.';
   }
