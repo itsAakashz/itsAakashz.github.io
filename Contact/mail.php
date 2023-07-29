@@ -6,7 +6,7 @@ $message= $_POST['message'];
 $to = "gzatrop@gmail.com";
 $subject = "Mail From website";
 $txt ="Name = ". $name . "\r\n  Email = " . $email . "\r\n Message =" . $message;
-$headers = "From: noreply@yoursite.com";
+$headers = "From: noreply@itsaakashz.live";
 if($email!=NULL){
     mail($to,$subject,$txt,$headers);
 }
