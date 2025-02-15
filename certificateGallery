@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Gallery</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #3e2723, #8d6e63);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header, footer {
+            background: #5d4037;
+            color: white;
+            padding: 15px 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        h1 {
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border: 8px solid #8d6e63;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            align-items: center;
+            justify-content: center;
+        }
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 12px;
+        }
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>Certificate Gallery</header>
+    <h1>My Certificates</h1>
+    <div class="gallery" id="gallery">
+        <img src="https://camo.githubusercontent.com/cdb39a09bc8e793260f3469ef336e0887a32bf62f0c2298ce4a7f1693df2673c/68747470733a2f2f6173736574732e686f6c6f70696e2e696f2f6866323032346c6576656c732f6c6576656c302d736c6f74682d636f64652d302d302d302d302e77656270" alt="Certificate 1" onclick="openModal(this.src)">
+        <img src="https://camo.githubusercontent.com/cdb39a09bc8e793260f3469ef336e0887a32bf62f0c2298ce4a7f1693df2673c/68747470733a2f2f6173736574732e686f6c6f70696e2e696f2f6866323032346c6576656c732f6c6576656c302d736c6f74682d636f64652d302d302d302d302e77656270" alt="Certificate 2" onclick="openModal(this.src)">
+        <img src="https://camo.githubusercontent.com/cdb39a09bc8e793260f3469ef336e0887a32bf62f0c2298ce4a7f1693df2673c/68747470733a2f2f6173736574732e686f6c6f70696e2e696f2f6866323032346c6576656c732f6c6576656c302d736c6f74682d636f64652d302d302d302d302e77656270" alt="Certificate 3" onclick="openModal(this.src)">
+        <img src="https://camo.githubusercontent.com/cdb39a09bc8e793260f3469ef336e0887a32bf62f0c2298ce4a7f1693df2673c/68747470733a2f2f6173736574732e686f6c6f70696e2e696f2f6866323032346c6576656c732f6c6576656c302d736c6f74682d636f64652d302d302d302d302e77656270" alt="Certificate 4" onclick="openModal(this.src)">
+        <img src="https://camo.githubusercontent.com/cdb39a09bc8e793260f3469ef336e0887a32bf62f0c2298ce4a7f1693df2673c/68747470733a2f2f6173736574732e686f6c6f70696e2e696f2f6866323032346c6576656c732f6c6576656c302d736c6f74682d636f64652d302d302d302d302e77656270" alt="Certificate 5" onclick="openModal(this.src)">
+        <img src="https://camo.githubusercontent.com/cdb39a09bc8e793260f3469ef336e0887a32bf62f0c2298ce4a7f1693df2673c/68747470733a2f2f6173736574732e686f6c6f70696e2e696f2f6866323032346c6576656c732f6c6576656c302d736c6f74682d636f64652d302d302d302d302e77656270" alt="Certificate 6" onclick="openModal(this.src)">
+    </div>
+    
+    <div class="modal" id="modal" onclick="closeModal()">
+        <span class="modal-close">&times;</span>
+        <img id="modal-img" src="">
+    </div>
+    <footer>&copy; 2025 My Certificates</footer>
+    <script>
+        function openModal(src) {
+            document.getElementById('modal-img').src = src;
+            document.getElementById('modal').style.display = 'flex';
+        }
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
